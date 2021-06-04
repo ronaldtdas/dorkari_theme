@@ -22,21 +22,28 @@
 
 <?php
 	if ( function_exists( 'ot_get_option' ) ) {
-	  $logo = ot_get_option( 'logo' );
-	  $pc = ot_get_option( 'primary_color' );
-	  $sc = ot_get_option( 'secondary_color' );
-	  $bg = ot_get_option( 'background_color' );
+		$bg = ot_get_option( 'background_color' );
 	}
 ?>
-
 <body style='background-color: <?= $bg?>;'>
 
-	<!--Logo area-->
+
+<!--Logo area-->	
 	<div class="logo">
-		<a href="#">
-			<img src='<?= $logo?>' alt="logo">
+		<a href="http://localhost/dorkari-gadget/">
+			<?php
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+			 
+			if ( has_custom_logo() ) {
+				echo '<img src="' . esc_url( $logo[0] ) . '" alt="' . get_bloginfo( 'name' ) . '">';
+			} else {
+				echo '<h1>' . get_bloginfo('name') . '</h1>';
+			}
+			?>
 		</a>
 	</div>
+
 	
 	<!--Menu area-->
 <?php
