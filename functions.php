@@ -14,6 +14,14 @@ if ( version_compare( $GLOBALS['wp_version'], '5.3', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 }
 
+
+function wpb_custom_new_menu() {
+  register_nav_menu('my-custom-menu',__( 'My Custom Menu' ));
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+
+
 if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -77,6 +85,7 @@ if ( ! function_exists( 'twenty_twenty_one_setup' ) ) {
 				'footer'  => __( 'Secondary menu', 'twentytwentyone' ),
 			)
 		);
+		
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments

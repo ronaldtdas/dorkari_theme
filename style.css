@@ -57,7 +57,6 @@ p{
 
 body {
 	color: #121212;
-	background-color: #f9d5a352;
 	font-family: 'SolaimanLipi', sans-serif;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -85,20 +84,22 @@ body {
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.navbar ul a{
-	color: #f7bf4f;
-	overflow: hidden;
-}
+
 .navbar ul li{
 	width: 100%;
 	font-size: large;
-	padding: 11px 0;
 	overflow: hidden;
 }
-.navbar ul a li:hover{
+.navbar ul li a{
+	padding: 11px 0;
+	overflow: hidden;
+	display: block;
+	color: #f7bf4f;
+}
+.navbar ul li a:hover{
 	transition: .2s;
 	transform: scale(1.4);
-	background-color: #50360f;
+	background-color: #ffffff1f;
 }
 
 
@@ -110,8 +111,8 @@ body {
 .footer{
 	padding: 105px 0;
 	overflow: hidden;
-	color: #777;
-	background-color: #f7bf4f;
+	color: #000;
+	background-color: #00000019;
 }
 .footer .container{
 	display: grid;

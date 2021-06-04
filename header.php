@@ -20,12 +20,17 @@
 	<?php wp_head(); ?>
 </head>
 
-<body>
 <?php
 	if ( function_exists( 'ot_get_option' ) ) {
 	  $logo = ot_get_option( 'logo' );
+	  $pc = ot_get_option( 'primary_color' );
+	  $sc = ot_get_option( 'secondary_color' );
+	  $bg = ot_get_option( 'background_color' );
 	}
 ?>
+
+<body style='background-color: <?= $bg?>;'>
+
 	<!--Logo area-->
 	<div class="logo">
 		<a href="#">
@@ -33,12 +38,35 @@
 		</a>
 	</div>
 	
-	<!--Navbar area-->
+	<!--Menu area-->
+<?php
+wp_nav_menu( array( 
+    'menu'                 => '',
+	'container'            => 'div',
+	'container_class'      => 'navbar',
+	'container_id'         => '',
+	'container_aria_label' => '',
+	'menu_class'           => '',
+	'menu_id'              => '',
+	'echo'                 => true,
+	'fallback_cb'          => '',
+	'before'               => '',
+	'after'                => '',
+	'link_before'          => '',
+	'link_after'           => '',
+	'items_wrap'           => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+	'item_spacing'         => 'preserve',
+	'depth'                => 0,
+	'walker'               => '',
+	'theme_location'       => 'my-custom-menu' ) );
+?>	
+<!--Navbar area
 	<div class="navbar">
 		<ul>
-			<a href="index.php"><li>হোম</li></a>
-			<a href="blog.html"><li>ব্লগ</li></a>
-			<a href="post.html"><li>পোস্ট</li></a>
-			<a href="contact.html"><li>যোগাযোগ</li></a>
+			<li><a href="index.html">হোম</a></li>
+			<li><a href="index.html">ব্লগ</a></li>
+			<li><a href="index.html">পোস্ট</a></li>
+			<li><a href="index.html">যোগাযোগ</a></li>
 		</ul>
 	</div>
+-->
