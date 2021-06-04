@@ -19,15 +19,15 @@
 	  $tagline_description = ot_get_option( 'tagline_description' );
 	  $phone = ot_get_option( 'phone' );
 	  $email = ot_get_option( 'email' );
-	  $address_line1 = ot_get_option( 'address_line1' );
-	  $address_line2 = ot_get_option( 'address_line2' );
+	  $address_line_1 = ot_get_option( 'address_line_1' );
+	  $address_line_2 = ot_get_option( 'address_line_2' );
 	}
 ?>
 <div class="footer">
 		<div class="container">
 			<div class="f1">
 				<a href="#">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo">
+					<img src='<?= $logo?>' alt="logo">
 				</a>
 				
 				<h3><?= $footer_tagline ?></h3>
@@ -36,7 +36,7 @@
 			<div class="f2">
 				<h1><a href="tell:<?= $phone ?>"><?= $phone ?> </a></h1>
 				<p><a href="mailto:<?= $email ?>"><?= $email ?></a></p>
-				<p><?= $address_line1 ?><br><?= $address_line2 ?></p>
+				<p><?= $address_line_1 ?><br><?= $address_line_2 ?></p>
 			</div>
 		</div>
 	</div>
