@@ -68,8 +68,7 @@ body {
 	margin: 0 auto;
 	padding: 17px 17px 17px 0;
 }
-.logo img{
-}
+.logo img{width: 100%;}
 .navbar{
 	width: 100%;
 	height: 45px;
@@ -127,8 +126,7 @@ body {
 .footer .f1 a{
 	overflow: hidden;
 }
-.footer .f1 a img{
-}
+.footer .f1 a img{width: 20%;}
 .footer .f1 h3{
 	color: #000;
 	font-size: x-large;
