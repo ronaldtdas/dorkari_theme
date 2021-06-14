@@ -53,4 +53,4 @@ endwhile; // End of the loop.
 </div>
 
 
-<?phpget_footer(); ?>
+<?php get_footer(); ?>

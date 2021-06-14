@@ -273,6 +273,17 @@ body {
 
 
 
+#comments{
+	display: none;
+}
+.post-navigation{
+	display: none;
+}
+
+
+
+
+
 .wp-block-image{
 	margin-top: 1em;
 }
