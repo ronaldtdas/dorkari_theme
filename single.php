@@ -10,7 +10,10 @@
  */
 
 get_header();
+?>
 
+<div class="container">
+<?php
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
@@ -46,5 +49,8 @@ while ( have_posts() ) :
 		)
 	);
 endwhile; // End of the loop.
+?>
+</div>
 
-get_footer();
+
+<?phpget_footer(); ?>

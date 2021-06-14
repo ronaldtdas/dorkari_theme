@@ -234,30 +234,48 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transition: 2s;
 }
-.post-wrapper{
-	margin: 50px 0;
+
+
+
+.post-wrapper{margin: 50px 0;}
+.post-wrapper img{ padding-top: 50px; width: 100%}
+.post-content{width: 75% !important; margin:0 auto; 	padding-top: 50px; text-align: justify;}
+.text{font-size: larger;}
+
+
+
+.entry-header{
 }
-.post-wrapper img{
-	padding-top: 50px;
-	width: 100%
+.entry-header h1{
+	padding: 50px 0;
+	font-size: xxx-large;
 }
-.post-content{
-	width: 75% !important;
-	margin: 0 auto;
-	padding-top: 50px;
+.entry-header .posted-by, .entry-header .post-taxonomies{
+	text-align: left;
+}
+.entry-header .posted-by .posted-on{
+	display: block;
+}
+.entry-header .posted-by .byline{
+	display: block;
+}
+.entry-header .posted-by .edit-link{
+	display: none;
+}
+.entry-content{
+	margin-top: 50px;
+	font-size: x-large;
 	text-align: justify;
 }
-.text{
-	font-size: larger;
+.entry-content p{
+	padding: 10px 0;
 }
 
 
 
-
-
-
-
-
+.wp-block-image{
+	margin-top: 1em;
+}
 
 
 
