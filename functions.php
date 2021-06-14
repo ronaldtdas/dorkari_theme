@@ -651,24 +651,3 @@ function themename_custom_logo_setup() {
 }
  
 add_action( 'after_setup_theme', 'themename_custom_logo_setup' );
-
-function custom_post_type()
-{
-	$args = array(
-	
-		'labels' => array(
-			'name' => 'Articles',
-			'singular_name' => 'Article'
-		),
-		'public' => true,
-		'has_archive' => true,
-		'supports' => array(
-			'title', 'editor', 'thumbnail'),
-		'menu_icon' => 'dashicons-edit',
-	);
-	register_post_type('Articles', $args);
-}
-add_action('init', 'custom_post_type');
-
-
-
